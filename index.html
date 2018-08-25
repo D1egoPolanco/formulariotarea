@@ -8,20 +8,24 @@
 <header>
     <h1>Formulario </h1>
 </header>
+<form action="index.html" method="post">
+<fieldset>
+  <legend>Formulario</legend>
 <section>
     <article>
-        <form action="index.html" method="post">
+
+
         <fieldset>
             <legend>Informacion personal</legend>
 
             <label for="firstname">Nombre</label>
-            <input type="text" name="firstname" id="firstname">
+            <input type="text" name="firstname" id="firstname" placeholder="Diego" required>
             <label for="lastname">apellido</label>
-            <input type="text" name="lastname" id="lastname">
+            <input type="text" name="lastname" id="lastname" placeholder="Polanco" required>
             <label for="date">Fecha</label>
             <input type="date" name="date" id="date">
             <label for="animal">animal favorito</label>
-            <input type="text" name="animal" id="animal">
+            <input type="text" name="animal" id="animal" placeholder="perro">
         </fieldset>
             </article>
     <br>
@@ -30,11 +34,12 @@
             <legend>Cuenta</legend>
 
             <label for="mail">e-mail</label>
-            <input type="email" name="mail" placeholder="diego@gmail.com">
+            <input type="email" name="mail" placeholder="diego@gmail.com" id="mail" required>
             <label for="contraseña">contraseña</label>
-            <input type="password" name="password" required >
-            <label for="password">confirmar contraseña</label>
-            <input type="password" name="password 1" >
+            <input type="password" name="pw" id="contraseña" pattern=".{6,}" title="6 o mas caracteres permitido" required>
+
+            <label for="password1">confirmar contraseña</label>
+            <input type="password" name="password1" id="password1" pattern=".{6,}" title="6 o mas caracteres permitido" required >
         </fieldset>
     </article>
     <br>
@@ -42,23 +47,25 @@
         <fieldset>
             <legend>Contacto</legend>
             <label for="Direccion">direccion</label>
-            <input type="text" name="Direccion" placeholder="canton matasano">
+            <input type="text" name="Direccion" id="Direccion" placeholder="canton matasano"required>
 
             <label for="ciudad">ciudad</label>
-            <input type="text" name="ciudad" placeholder="san salvador">
+            <input type="text" name="ciudad" id="ciudad" placeholder="san salvador"required>
 
             <label for="pais">pais</label>
-            <input type="text" name="pais" placeholder="El Salvador">
+            <input type="text" name="pais" id="pais" placeholder="El Salvador" required>
 
             <label for="telefono">telefono</label>
-            <input type="tel" name="telefono" placeholder="(+503)">
+            <input type="tel" name="telefono" id="telefono" placeholder="(+503)"required>
 
 
 
         </fieldset>
 
     </article>
+    <br>
     <input type="submit" value="Enviar">
+</fieldset>
     </form>
 </section>
 
